@@ -47,7 +47,7 @@ function NavBar() {
        
         // responsive navbar
         // responsive navbar
-        <div className="navbar bg-base-100 w-11/12 mx-auto max-w-[1280px]">
+        <div className="navbar bg-transparent w-11/12 mx-auto max-w-[1280px]">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
