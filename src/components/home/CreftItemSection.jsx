@@ -12,10 +12,12 @@ import {Link} from 'react-router-dom'
 import { Pagination } from 'swiper/modules';
 
 function CreftItemSection() {
+    const isSmallDevice = window.innerWidth < 700;
+
     return (
         <>
             <Swiper
-                slidesPerView={3}
+                slidesPerView={isSmallDevice ?1:3}
                 spaceBetween={30}
                 //   pagination={{
                 //     clickable: true,
@@ -45,7 +47,7 @@ function CreftItemSection() {
                 {/* silder 2 */}
                 <SwiperSlide>
 
-                <div className="relative w-[350px] h-[250px]">
+                <div className="relative w-full md:w-[350px] h-[250px]">
                 {/* text and button   */}
                 <Link className='absolute flex justify-center items-center z-40 bg-[#bcbcbc1A] rounded-2xl w-full h-full hover:bg-[#bcbcbc80] ease-linear duration-300 [&>*]:hidden [&>*]:hover:block'>
                 <button className='py-1 bg-[#bcbcbc99] px-3 rounded-full opacity-100
