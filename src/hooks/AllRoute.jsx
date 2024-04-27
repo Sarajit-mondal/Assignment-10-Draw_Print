@@ -5,6 +5,7 @@ import App from "../App";
 import Home from "../pages/Home";
 import AllCardItem from "../components/allCard/AllCardItem";
 import AddCreft from "../pages/AddCreft";
+import ViewDetails from "../pages/ViewDetails";
  
   
  export const router = createBrowserRouter([
@@ -21,8 +22,12 @@ import AddCreft from "../pages/AddCreft";
           element: <AllCardItem></AllCardItem>
         },
         {
-          path:'//addCraftItem',
+          path:'/addCraftItem',
           element: <AddCreft></AddCreft>
+        },
+        {
+          path:'/details',
+          element: <ViewDetails></ViewDetails>
         },
       ]
     },

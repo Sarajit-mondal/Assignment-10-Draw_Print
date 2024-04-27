@@ -13,6 +13,12 @@ const AddCreft = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="max-w-lg mx-auto mt-8">
       <div className="mb-4">
+        <label htmlFor="photo_url" className="block text-sm font-medium text-gray-700">Photo Url</label>
+        <input type="text" id="photo_url" {...register("photo_url", { required: true })} className="mt-1 border-sky-300 border-2 bg-transparent p-2   focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm  rounded-md " />
+        {errors.item_name && <span className="text-red-500">Item name is required</span>}
+      </div>
+      {/* name */}
+      <div className="mb-4">
         <label htmlFor="item_name" className="block text-sm font-medium text-gray-700">Item Name</label>
         <input type="text" id="item_name" {...register("item_name", { required: true })} className="mt-1 border-sky-300 border-2 bg-transparent p-2   focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm  rounded-md " />
         {errors.item_name && <span className="text-red-500">Item name is required</span>}

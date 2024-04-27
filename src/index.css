@@ -6,3 +6,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+tr,th,td{
+    border: 2px solid skyblue;
+    padding: 4px;
+    padding-left: 8px;
+    
+}
