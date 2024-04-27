@@ -13,7 +13,8 @@ export default {
      'sky-200': "#cfecf7",
      "gray-dark": "#444444",
      "gray-light":"#999999",
-     "light-color":"#ffffff"
+     "light-color":"#ffffff",
+     "red-500":"#ff0000"
     },
     fontFamily: {
       Lobster: ["Lobster", "sans-serif"]

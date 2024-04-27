@@ -3,6 +3,8 @@ import {
   } from "react-router-dom";
 import App from "../App";
 import Home from "../pages/Home";
+import AllCardItem from "../components/allCard/AllCardItem";
+import AddCreft from "../pages/AddCreft";
  
   
  export const router = createBrowserRouter([
@@ -13,7 +15,15 @@ import Home from "../pages/Home";
         {
           path:'/',
           element: <Home></Home>
-        }
+        },
+        {
+          path:'/allArtAndCraft',
+          element: <AllCardItem></AllCardItem>
+        },
+        {
+          path:'//addCraftItem',
+          element: <AddCreft></AddCreft>
+        },
       ]
     },
   ]);
