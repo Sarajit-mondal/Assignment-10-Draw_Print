@@ -24,7 +24,9 @@ function CreftItemSection() {
             <Swiper
                 slidesPerView={isSmallDevice ?1:3}
                 spaceBetween={30}
-            
+                
+                loop={true} // Enable loop mode
+                autoplay={{ delay: 5000}} // Auto-play configuration
                 //   pagination={{
                 //     clickable: true,
                 //   }}
@@ -45,7 +47,7 @@ function CreftItemSection() {
                             </Link>
                             
                             <div className='absolute flex justify-center items-center z-50 bottom-8 left-2/4 -translate-x-2/4  text-sky-500 rounded-full'>
-                                <h2>subcategory_Name</h2>
+                                <h2>{item.subcategory_name}</h2>
                             </div>
                      {/* text and button   */}
             
@@ -65,7 +67,7 @@ function CreftItemSection() {
                 </Link>
                 
                 <div className='absolute flex justify-center items-center z-50 bottom-8 left-2/4 -translate-x-2/4  text-sky-500 rounded-full'>
-                    <h2>subcategory_Name</h2>
+                    <h2>{item.subcategory_name}</h2>
                 </div>
          {/* text and button   */}
                 <img src={cardFram} alt="" className='absolute z-10 w-full h-[250px]' /> 

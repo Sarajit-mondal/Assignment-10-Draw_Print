@@ -27,8 +27,10 @@ const AddCreft = () => {
 
   
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="max-w-lg mx-auto mt-8">
-      <div className="mb-4">
+    <form onSubmit={handleSubmit(onSubmit)} className=" mx-auto p-5 md:px-16 lg:px-28 ">
+   <div className='flex flex-col justify-between md:flex-row md:gap-20 items-center'>
+   <div className='w-full'>
+     <div className="mb-4">
         <label htmlFor="photo_url" className="block text-sm font-medium text-gray-700">Photo Url</label>
         <input type="text" id="photo_url" {...register("photo_url", { required: true })} className="mt-1 border-sky-300 border-2 bg-transparent p-2   focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm  rounded-md " />
         {errors.item_name && <span className="text-red-500">Item name is required</span>}
@@ -46,12 +48,7 @@ const AddCreft = () => {
         {errors.subcategory_name && <span className="text-red-500">Subcategory name is required</span>}
       </div>
 
-        {/* short description */}
-      <div className="mb-4">
-        <label htmlFor="short_description" className="block text-sm font-medium text-gray-700">Short Description</label>
-        <textarea id="short_description" {...register("short_description", { required: true })} className="mt-1 border-sky-300 border-2 bg-transparent p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm  rounded-md resize-none" />
-        {errors.short_description && <span className="text-red-500">Short description is required</span>}
-      </div>
+    
 
       <div className="mb-4">
         <label htmlFor="price" className="block text-sm font-medium text-gray-700">Price</label>
@@ -65,8 +62,12 @@ const AddCreft = () => {
         <input type="number" id="rating" {...register("rating", { required: true, min: 0, max: 5 })} className="mt-1 border-sky-300 border-2 bg-transparent p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm  rounded-md" />
         {errors.rating && <span className="text-red-500">Rating is required and must be between 0 and 5</span>}
       </div>
-
-      <div className="mb-4">
+     </div>
+     {/* right side */}
+     {/* right side */}
+     {/* right side */}
+     <div className='w-full'>
+     <div className="mb-4">
         <label htmlFor="customization" className="block text-sm font-medium text-gray-700">Customization</label>
         <select id="customization" {...register("customization", { required: true })} className="mt-1 border-sky-300 border-2 bg-transparent p-2 block w-full pl-3 pr-10 text-base  focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
           <option value="yes">Yes</option>
@@ -100,6 +101,14 @@ const AddCreft = () => {
         <label htmlFor="user_name" className="block text-sm font-medium text-gray-700">User Name</label>
         <input type="text" id="user_name" {...register("user_name", { required: true })} className="mt-1 border-sky-300 border-2 bg-transparent p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm  rounded-md" />
         {errors.user_name && <span className="text-red-500">User name is required</span>}
+      </div>
+     </div>
+   </div>
+       {/* short description */}
+       <div className="mb-4">
+        <label htmlFor="short_description" className="block text-sm font-medium text-gray-700">Short Description</label>
+        <textarea id="short_description" {...register("short_description", { required: true })} className="mt-1 border-sky-300 border-2 bg-transparent p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm  rounded-md resize-none" />
+        {errors.short_description && <span className="text-red-500">Short description is required</span>}
       </div>
      {/* add button */}
       <button type="submit" className="bg-sky-500 text-gray-dark py-2 px-4 rounded hover:bg-sky-400 text-center w-full">Add</button>

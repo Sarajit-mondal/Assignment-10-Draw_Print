@@ -7,6 +7,8 @@ import AllCardItem from "../components/allCard/AllCardItem";
 import AddCreft from "../pages/AddCreft";
 import ViewDetails from "../pages/ViewDetails";
 import MyArtAndCraft from "../pages/MyArtAndCraft";
+import CatagoryCard from "../components/allCard/CatagoryCard";
+import UpadtePage from "../pages/UpadtePage";
  
   
  export const router = createBrowserRouter([
@@ -34,6 +36,14 @@ import MyArtAndCraft from "../pages/MyArtAndCraft";
         {
           path:'/myArtAndCraft',
           element: <MyArtAndCraft></MyArtAndCraft>
+        },
+        {
+          path:'/catagory/:id',
+          element: <CatagoryCard></CatagoryCard>
+        },
+        {
+          path:'/update/:id',
+          element: <UpadtePage></UpadtePage>
         },
       ]
     },

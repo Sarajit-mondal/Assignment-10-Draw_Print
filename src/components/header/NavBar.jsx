@@ -79,7 +79,7 @@ function NavBar() {
                         data-tooltip-content="Add Craft Item"><NavLink to="/addCraftItem">Add Craft Item</NavLink></li>
                     <li data-tooltip-id="my-tooltip"
                         data-tooltip-content="My Art&Craft List"><NavLink to="/myArtAndCraft">My Art&Craft List</NavLink></li>
-                    <Tooltip id="my-tooltip" place="right" />
+                    <Tooltip id="my-tooltip" place="bottom" />
                 </ul>
             </div>
             <div className="navbar-end">

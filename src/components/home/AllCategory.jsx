@@ -16,7 +16,7 @@ function AllCategory() {
          <img src={LandscapePainting} alt=""  className='absolute p-1'/>
 
           {/* text and button   */}
-          <Link className='absolute flex justify-center items-center z-40 bg-[#bcbcbc1A] rounded-2xl w-full h-full hover:bg-[#bcbcbc80] ease-linear duration-300 [&>*]:hidden [&>*]:hover:block'>
+          <Link to={`/catagory/${"landscapepainting"}`} className='absolute flex justify-center items-center z-40 bg-[#bcbcbc1A] rounded-2xl w-full h-full hover:bg-[#bcbcbc80] ease-linear duration-300 [&>*]:hidden [&>*]:hover:block'>
                 <button className='py-1 bg-[#bcbcbc99] px-3 rounded-full opacity-100
               text-sky-500 border-2  z-50 active:scale-95'>See More</button>
                 </Link>
@@ -32,7 +32,7 @@ function AllCategory() {
          <img src={PortraitDrawing} alt=""  className='absolute p-1'/>
 
          {/* text and button   */}
-         <Link className='absolute flex justify-center items-center z-40 bg-[#bcbcbc1A] rounded-2xl w-full h-full hover:bg-[#bcbcbc80] ease-linear duration-300 [&>*]:hidden [&>*]:hover:block'>
+         <Link to={`/catagory/${"portraitdrawing"}`} className='absolute flex justify-center items-center z-40 bg-[#bcbcbc1A] rounded-2xl w-full h-full hover:bg-[#bcbcbc80] ease-linear duration-300 [&>*]:hidden [&>*]:hover:block'>
                 <button className='py-1 bg-[#bcbcbc99] px-3 rounded-full opacity-100
               text-sky-500 border-2  z-50 active:scale-95'>See More</button>
                 </Link>
@@ -47,7 +47,7 @@ function AllCategory() {
          <img src={allCardFram} alt="" className='absolute z-10 rounded-lg' /> 
          <img src={WatercolourPainting} alt=""  className='absolute p-1'/>
          {/* text and button   */}
-         <Link className='absolute flex justify-center items-center z-40 bg-[#bcbcbc1A] rounded-2xl w-full h-full hover:bg-[#bcbcbc80] ease-linear duration-300 [&>*]:hidden [&>*]:hover:block'>
+         <Link to={`/catagory/${"watercolourpainting"}`} className='absolute flex justify-center items-center z-40 bg-[#bcbcbc1A] rounded-2xl w-full h-full hover:bg-[#bcbcbc80] ease-linear duration-300 [&>*]:hidden [&>*]:hover:block'>
                 <button className='py-1 bg-[#bcbcbc99] px-3 rounded-full opacity-100
               text-sky-500 border-2  z-50 active:scale-95'>See More</button>
                 </Link>
@@ -62,7 +62,7 @@ function AllCategory() {
          <img src={allCardFram} alt="" className='absolute z-10 rounded-lg' /> 
          <img src={OilPainting} alt=""  className='absolute p-1'/>
          {/* text and button   */}
-         <Link className='absolute flex justify-center items-center z-40 bg-[#bcbcbc1A] rounded-2xl w-full h-full hover:bg-[#bcbcbc80] ease-linear duration-300 [&>*]:hidden [&>*]:hover:block'>
+         <Link to={`/catagory/${"oilpainting"}`} className='absolute flex justify-center items-center z-40 bg-[#bcbcbc1A] rounded-2xl w-full h-full hover:bg-[#bcbcbc80] ease-linear duration-300 [&>*]:hidden [&>*]:hover:block'>
                 <button className='py-1 bg-[#bcbcbc99] px-3 rounded-full opacity-100
               text-sky-500 border-2  z-50 active:scale-95'>See More</button>
                 </Link>
@@ -77,7 +77,7 @@ function AllCategory() {
          <img src={allCardFram} alt="" className='absolute z-10 rounded-lg' /> 
          <img src={CharcoalSketching} alt=""  className='absolute p-1'/>
          {/* text and button   */}
-         <Link className='absolute flex justify-center items-center z-40 bg-[#bcbcbc1A] rounded-2xl w-full h-full hover:bg-[#bcbcbc80] ease-linear duration-300 [&>*]:hidden [&>*]:hover:block'>
+         <Link to={`/catagory/${"charcoalsketching"}`} className='absolute flex justify-center items-center z-40 bg-[#bcbcbc1A] rounded-2xl w-full h-full hover:bg-[#bcbcbc80] ease-linear duration-300 [&>*]:hidden [&>*]:hover:block'>
                 <button className='py-1 bg-[#bcbcbc99] px-3 rounded-full opacity-100
               text-sky-500 border-2  z-50 active:scale-95'>See More</button>
                 </Link>
@@ -92,7 +92,7 @@ function AllCategory() {
          <img src={allCardFram} alt="" className='absolute z-10 rounded-lg' /> 
          <img src={CartoonDrawing} alt=""  className='absolute p-1'/>
          {/* text and button   */}
-         <Link className='absolute flex justify-center items-center z-40 bg-[#bcbcbc1A] rounded-2xl w-full h-full hover:bg-[#bcbcbc80] ease-linear duration-300 [&>*]:hidden [&>*]:hover:block'>
+         <Link to={`/catagory/${"cartoondrawing"}`} className='absolute flex justify-center items-center z-40 bg-[#bcbcbc1A] rounded-2xl w-full h-full hover:bg-[#bcbcbc80] ease-linear duration-300 [&>*]:hidden [&>*]:hover:block'>
                 <button className='py-1 bg-[#bcbcbc99] px-3 rounded-full opacity-100
               text-sky-500 border-2  z-50 active:scale-95'>See More</button>
                 </Link>

@@ -45,19 +45,21 @@ user_name
   <div className="card-body">
   <h1 className="text-3xl font-bold mb-4">{item.item_name}</h1>
         
-        <div className="flex items-center mb-4 justify-between mr-11">
+        <div className="flex items-center mb-4 justify-between">
           <span className="text-lg font-semibold text-blue-600 mr-2">Price : ${item.price}</span>
-          <span className="text-gray-600 flex items-center">Rating: {item.rating}<FaStar></FaStar></span>
+          <span className="text-gray-600 flex items-center text-right">Rating: {item.rating}<FaStar></FaStar></span>
          
         </div>
-        <div className="mb-4 flex justify-between border-2 items-center">
+        <div className="mb-4 flex justify-between items-center">
           
-        <p>Customization: <Link className="py-1 px-3 bg-sky-500 text-light-color rounded-full">{item.customization}</Link></p>
-          <p>Stock Status: {item.stock_status}</p>
+        <p className=''>Customization: <Link className="py-1 px-3 bg-sky-500 text-light-color rounded-full">{item.customization}</Link></p>
+          <p className='text-right'>Stock Status: {item.stock_status}</p>
         </div>
         <div className='mb-4  flex justify-between gap-5 items-center'>
-            <button className='btn btn-sm bg-sky-400 text-gray-dark hover:text-sky-500'><Link>Update</Link></button>
-            <button className='btn btn-error btn-sm text-gray-dark hover:text-light-color'><Link>Delete</Link></button>
+          <Link to={`/update/${item._id}`}> <button className='btn btn-sm bg-sky-400 text-gray-dark hover:text-sky-500'><Link>Update</Link></button>
+          </Link>
+           
+            <button className='btn btn-error btn-sm text-gray-dark hover:text-light-color'>Delete</button>
         </div>
     </div>
   </div>
