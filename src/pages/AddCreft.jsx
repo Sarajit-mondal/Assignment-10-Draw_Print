@@ -7,9 +7,25 @@ const AddCreft = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const onSubmit = (data) => {
     // Handle form submission here, e.g., send data to backend
-    console.log(data);
+    console.log(data)
+  
+   
+    fetch('http://localhost:5001/allCraft',{
+      method:"POST",
+      headers:
+        {
+          'Content-Type': 'application/json',
+        },
+      
+      body:JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data)
+    })
   };
 
+  
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="max-w-lg mx-auto mt-8">
       <div className="mb-4">
