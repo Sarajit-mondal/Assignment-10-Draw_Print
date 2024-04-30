@@ -3,9 +3,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-import CraftCard from '../../assets/catagory/fram/CraftCard.png'
-import cardFram from '../../assets/catagory/fram/card-fram.png'
-import OilPainting from '../../assets/catagory/Oil Painting.jpg'
 import {Link, useLoaderData} from 'react-router-dom'
 
 // import required modules
@@ -51,7 +48,7 @@ function CreftItemSection() {
                             </div>
                      {/* text and button   */}
             
-                            <img src={CraftCard} alt="" className='w-full h-[250px] rounded-2xl' />
+                            <img src="https://i.postimg.cc/9f5xqmvR/Craft-Card.png" alt="" className='w-full h-[250px] rounded-2xl' />
             
                                 <img src={item.photo_url} alt="" className='absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 w-[245px] h-[147px]  rounded-sm  feathered-edge' />
                                
@@ -70,7 +67,7 @@ function CreftItemSection() {
                     <h2>{item.subcategory_name}</h2>
                 </div>
          {/* text and button   */}
-                <img src={cardFram} alt="" className='absolute z-10 w-full h-[250px]' /> 
+                <img src="https://i.postimg.cc/qBzY5XP4/card-fram.png" alt="" className='absolute z-10 w-full h-[250px]' /> 
               <img src={item.photo_url} alt=""  className='absolute p-8'/>
         </div> 
         </SwiperSlide>

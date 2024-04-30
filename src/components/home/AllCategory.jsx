@@ -1,19 +1,11 @@
  import {Link} from 'react-router-dom'
  
- 
- import allCardFram from '../../assets/catagory/fram/allCardFram.png'
- import LandscapePainting from '../../assets/catagory/Landscape Painting.jpg'
- import  PortraitDrawing from '../../assets/catagory/Portrait Drawing.jpg'
- import WatercolourPainting from '../../assets/catagory/Watercolour Painting.jpg'
- import OilPainting from '../../assets/catagory/Oil Painting.jpg'
- import CharcoalSketching from '../../assets/catagory/Charcoal Sketching.jpg'
- import CartoonDrawing from '../../assets/catagory/Cartoon Drawing.jpg'
 function AllCategory() {
   return (
     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  justify-center gap-6 [&>div]:mx-auto '>
         <div className="relative w-[350px] h-[250px] hover:scale-105 ease-linear duration-200">
-         <img src={allCardFram} alt="" className='absolute z-10 rounded-lg' /> 
-         <img src={LandscapePainting} alt=""  className='absolute p-1'/>
+         <img src="https://i.postimg.cc/9f5xqmvR/Craft-Card.png" alt="" className='absolute z-10 rounded-lg' /> 
+         <img src="https://i.postimg.cc/T3g1TxgY/Landscape-Painting.jpg" alt=""  className='absolute p-1'/>
 
           {/* text and button   */}
           <Link to={`/catagory/${"landscapepainting"}`} className='absolute flex justify-center items-center z-40 bg-[#bcbcbc1A] rounded-2xl w-full h-full hover:bg-[#bcbcbc80] ease-linear duration-300 [&>*]:hidden [&>*]:hover:block'>
@@ -28,8 +20,8 @@ function AllCategory() {
         </div> 
           {/* card one */}
           <div className="relative w-[350px] h-[250px] hover:scale-105 ease-linear duration-200">
-         <img src={allCardFram} alt="" className='absolute z-10 rounded-lg' /> 
-         <img src={PortraitDrawing} alt=""  className='absolute p-1'/>
+         <img src="https://i.postimg.cc/9f5xqmvR/Craft-Card.png" alt="" className='absolute z-10 rounded-lg' /> 
+         <img src="https://i.postimg.cc/N017ZZpW/Portrait-Drawing.jpg" alt=""  className='absolute p-1'/>
 
          {/* text and button   */}
          <Link to={`/catagory/${"portraitdrawing"}`} className='absolute flex justify-center items-center z-40 bg-[#bcbcbc1A] rounded-2xl w-full h-full hover:bg-[#bcbcbc80] ease-linear duration-300 [&>*]:hidden [&>*]:hover:block'>
@@ -44,8 +36,8 @@ function AllCategory() {
         </div> 
         {/* card two */}
         <div className="relative w-[350px] h-[250px] hover:scale-105 ease-linear duration-200">
-         <img src={allCardFram} alt="" className='absolute z-10 rounded-lg' /> 
-         <img src={WatercolourPainting} alt=""  className='absolute p-1'/>
+         <img src="https://i.postimg.cc/9f5xqmvR/Craft-Card.png" alt="" className='absolute z-10 rounded-lg' /> 
+         <img src="https://i.postimg.cc/nVkZnzXL/Watercolour-Painting.jpg" alt=""  className='absolute p-1'/>
          {/* text and button   */}
          <Link to={`/catagory/${"watercolourpainting"}`} className='absolute flex justify-center items-center z-40 bg-[#bcbcbc1A] rounded-2xl w-full h-full hover:bg-[#bcbcbc80] ease-linear duration-300 [&>*]:hidden [&>*]:hover:block'>
                 <button className='py-1 bg-[#bcbcbc99] px-3 rounded-full opacity-100
@@ -59,8 +51,8 @@ function AllCategory() {
         </div> 
         {/* card three */}
         <div className="relative w-[350px] h-[250px] hover:scale-105 ease-linear duration-200">
-         <img src={allCardFram} alt="" className='absolute z-10 rounded-lg' /> 
-         <img src={OilPainting} alt=""  className='absolute p-1'/>
+         <img src="https://i.postimg.cc/9f5xqmvR/Craft-Card.png" alt="" className='absolute z-10 rounded-lg' /> 
+         <img src="https://i.postimg.cc/j5ScNZ4m/Oil-Painting.jpg" alt=""  className='absolute p-1'/>
          {/* text and button   */}
          <Link to={`/catagory/${"oilpainting"}`} className='absolute flex justify-center items-center z-40 bg-[#bcbcbc1A] rounded-2xl w-full h-full hover:bg-[#bcbcbc80] ease-linear duration-300 [&>*]:hidden [&>*]:hover:block'>
                 <button className='py-1 bg-[#bcbcbc99] px-3 rounded-full opacity-100
@@ -74,8 +66,8 @@ function AllCategory() {
         </div> 
         {/* card four */}
         <div className="relative w-[350px] h-[250px] hover:scale-105 ease-linear duration-200">
-         <img src={allCardFram} alt="" className='absolute z-10 rounded-lg' /> 
-         <img src={CharcoalSketching} alt=""  className='absolute p-1'/>
+         <img src="https://i.postimg.cc/9f5xqmvR/Craft-Card.png" alt="" className='absolute z-10 rounded-lg' /> 
+         <img src="https://i.postimg.cc/gJ3hxhfQ/Charcoal-Sketching.jpg" alt=""  className='absolute p-1'/>
          {/* text and button   */}
          <Link to={`/catagory/${"charcoalsketching"}`} className='absolute flex justify-center items-center z-40 bg-[#bcbcbc1A] rounded-2xl w-full h-full hover:bg-[#bcbcbc80] ease-linear duration-300 [&>*]:hidden [&>*]:hover:block'>
                 <button className='py-1 bg-[#bcbcbc99] px-3 rounded-full opacity-100
@@ -89,8 +81,8 @@ function AllCategory() {
         </div> 
         {/* card five */}
         <div className="relative w-[350px] h-[250px] hover:scale-105 ease-linear duration-200">
-         <img src={allCardFram} alt="" className='absolute z-10 rounded-lg' /> 
-         <img src={CartoonDrawing} alt=""  className='absolute p-1'/>
+         <img src="https://i.postimg.cc/9f5xqmvR/Craft-Card.png" alt="" className='absolute z-10 rounded-lg' /> 
+         <img src="https://i.postimg.cc/44qCf9Js/Cartoon-Drawing.jpg" alt=""  className='absolute p-1'/>
          {/* text and button   */}
          <Link to={`/catagory/${"cartoondrawing"}`} className='absolute flex justify-center items-center z-40 bg-[#bcbcbc1A] rounded-2xl w-full h-full hover:bg-[#bcbcbc80] ease-linear duration-300 [&>*]:hidden [&>*]:hover:block'>
                 <button className='py-1 bg-[#bcbcbc99] px-3 rounded-full opacity-100

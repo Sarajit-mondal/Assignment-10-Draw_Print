@@ -1,8 +1,4 @@
 import { Link } from 'react-router-dom'
-import catagoryFram from '../../assets/catagory/fram/catagoryCard.png'
-import allCardFram from '../../assets/catagory/fram/allCardFram.png'
- import LandscapePainting from '../../assets/catagory/Landscape Painting.jpg'
-
 
 import { FaStar } from "react-icons/fa";
 import { useContext } from 'react';

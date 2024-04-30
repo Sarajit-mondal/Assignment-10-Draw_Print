@@ -11,7 +11,7 @@ const firebaseConfig = {
   projectId: "draw-print-dream",
   storageBucket: "draw-print-dream.appspot.com",
   messagingSenderId: "388247011397",
-  appId: "1:388247011397:web:0a8b9b2fd1601ff824232c"
+  appId: "1:388247011397:web:b04759d46532a69c24232c"
 };
 
 // Initialize Firebase
