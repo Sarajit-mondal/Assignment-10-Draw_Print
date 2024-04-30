@@ -7,7 +7,7 @@ function CatagoryCard() {
   const findItem = useParams()
 // get data from database
   useEffect(()=>{
-    fetch(`http://localhost:5001/category/${findItem.id}`)
+    fetch(`https://a-10-painting-and-drawing-server.vercel.app/category/${findItem.id}`)
     .then(res => res.json())
     .then(data => setItem(data))
   },[])
@@ -16,7 +16,7 @@ function CatagoryCard() {
 console.log(items)
   return (
     <div>
-      <h1 className='text-3xl font-bold mt-6 mb-8 text-center  underline'>Catagory Name</h1>
+      <h1 className='text-3xl font-bold mt-6 mb-8 text-center  underline'>{findItem.id}</h1>
 
      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
 
@@ -39,8 +39,8 @@ console.log(items)
               </div> */}
               <div className='mb-4  flex justify-between gap-5 items-center'>
               <p>processing Time : {item.processing_time} hours</p>
-                <Link to={`/details/${item._id}`}> <button className='btn btn-sm bg-sky-400 text-gray-dark hover:text-sky-500'><Link>View Details</Link></button>
-                </Link>
+               <button className='btn btn-sm bg-sky-400 text-gray-dark hover:text-sky-500'><Link >View Details</Link></button>
+                
             
 
                  

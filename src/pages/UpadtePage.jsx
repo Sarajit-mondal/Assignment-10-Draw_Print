@@ -12,7 +12,7 @@ function UpadtePage() {
     const onSubmit = (data) => {
       // Handle form submission here, e.g., send data to backend
       console.log(data)
-      fetch(`http://localhost:5001/allCraft/${updateItem._id}`,{
+      fetch(`https://a-10-painting-and-drawing-server.vercel.app/allCraft/${updateItem._id}`,{
         method:"PATCH",
         headers:
           {

@@ -33,8 +33,8 @@ const AddCreft = () => {
     console.log(data)
     const category = data.item_name.toLowerCase().replaceAll(' ','');
    
-    addData('http://localhost:5001/allCraft',data)
-    addData(`http://localhost:5001/category/${category}`,data)
+    addData('https://a-10-painting-and-drawing-server.vercel.app/allCraft',data)
+    addData(`https://a-10-painting-and-drawing-server.vercel.app/category/${category}`,data)
 
   }
   return (

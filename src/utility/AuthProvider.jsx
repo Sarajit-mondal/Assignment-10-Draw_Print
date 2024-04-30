@@ -30,7 +30,7 @@ function AuthProvider({ children }) {
     setTogle(!togle);
   };
   useEffect(() => {
-    fetch("http://localhost:5001/allCraft")
+    fetch("https://a-10-painting-and-drawing-server.vercel.app/allCraft")
       .then((res) => res.json())
       .then((data) => setAllCraft(data));
   }, [togle]);

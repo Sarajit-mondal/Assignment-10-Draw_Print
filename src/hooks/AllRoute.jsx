@@ -36,7 +36,7 @@ import ArrowPage from "../components/arrowPage/ArrowPage";
         },
         {
           path:'/details/:id',
-          loader: ({params}) => fetch(`http://localhost:5001/allCraft/${params.id}`),
+          loader: ({params}) => fetch(`https://a-10-painting-and-drawing-server.vercel.app/allCraft/${params.id}`),
           element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>
           
         },
@@ -51,7 +51,7 @@ import ArrowPage from "../components/arrowPage/ArrowPage";
         },
         {
           path:'/update/:id',
-          loader: ({params}) => fetch(`http://localhost:5001/allCraft/${params.id}`),
+          loader: ({params}) => fetch(`https://a-10-painting-and-drawing-server.vercel.app/allCraft/${params.id}`),
           element: <UpadtePage></UpadtePage>
         },
         {

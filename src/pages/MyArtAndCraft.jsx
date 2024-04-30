@@ -33,8 +33,8 @@ function MyArtAndCraft() {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
         // data fetch
-        deleteData(`http://localhost:5001/allCraft/${id}`)
-        // deleteData(`http://localhost:5001/category/${category}/${price}`)
+        deleteData(`https://a-10-painting-and-drawing-server.vercel.app/allCraft/${id}`)
+        // deleteData(`https://a-10-painting-and-drawing-server.vercel.app/category/${category}/${price}`)
     
         Swal.fire("Delete! Successfully", "", "success");
       } else if (result.isDenied) {

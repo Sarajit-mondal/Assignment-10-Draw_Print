@@ -3,11 +3,13 @@ import CreftItemSection from '../components/home/CreftItemSection'
 import AllCategory from '../components/home/AllCategory'
 import OurServices from '../components/home/OurServices'
 import SeeOurleteastWorks from '../components/home/SeeOurleteastWorks'
+import BannerSlider from '../components/slider/BannerSlider'
 
 function Home() {
 
   return (
     <div className='mb-10'>
+      <BannerSlider></BannerSlider>
 
       <h1 className='text-3xl font-bold mt-10 mb-8 text-center  underline'><span className='underline text-sky-500 font-extrabold'>Craft</span> items section</h1>
       <CreftItemSection></CreftItemSection>
