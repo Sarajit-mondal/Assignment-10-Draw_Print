@@ -1,9 +1,12 @@
 
 
-import React from 'react';
+import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
+import { userContext } from '../utility/AuthProvider';
+import { success } from '../utility/sweetAlret';
 
 const AddCreft = () => {
+  const {user,togleCraft} = useContext(userContext)
   const { register, handleSubmit, formState: { errors } } = useForm();
   
   // post data
@@ -20,6 +23,8 @@ const AddCreft = () => {
     .then(res => res.json())
     .then(data => {
       console.log(data)
+      success("Add Successfull")
+      togleCraft()
     })
   }
  
@@ -99,13 +104,14 @@ const AddCreft = () => {
 
       <div className="mb-4">
         <label htmlFor="user_email" className="block text-sm font-medium text-gray-700">User Email</label>
-        <input type="email" id="user_email" {...register("user_email", { required: true })} className="mt-1 border-sky-300 border-2 bg-transparent p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm  rounded-md" />
+        <input defaultValue={user.email} type="email" id="user_email" {...register("user_email", { required: true })} className="mt-1 border-sky-300 border-2 bg-transparent p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm  rounded-md" />
         {errors.user_email && <span className="text-red-500">User email is required</span>}
       </div>
 
       <div className="mb-4">
         <label htmlFor="user_name" className="block text-sm font-medium text-gray-700">User Name</label>
-        <input type="text" id="user_name" {...register("user_name", { required: true })} className="mt-1 border-sky-300 border-2 bg-transparent p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm  rounded-md" />
+        <input defaultValue={user.displayName
+       } type="text" id="user_name" {...register("user_name", { required: true })} className="mt-1 border-sky-300 border-2 bg-transparent p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm  rounded-md" />
         {errors.user_name && <span className="text-red-500">User name is required</span>}
       </div>
      </div>

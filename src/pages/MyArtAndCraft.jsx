@@ -1,34 +1,46 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { FaStar } from 'react-icons/fa'
+import Swal from 'sweetalert2'
 import { userContext } from '../utility/AuthProvider'
 function MyArtAndCraft() {
-  const {togleCraft,allCraft} = useContext(userContext)
-    const [items,setItems]=useState()
-    const [reload,SetReload] = useState(false)
+  const {togleCraft,allCraft,user} = useContext(userContext)
+  
    
     
-  
+ 
   // delete Item from database
   
   const handleDelete =(id) =>{
+    Swal.fire({
+      title: "Do you want to Delete?",
+      showCancelButton: true,
+      confirmButtonText: "Yes",
+      confirmButtonColor:"green"
+
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        // data fetch
+        fetch(`http://localhost:5001/allCraft/${id}`,{
+          method:"DELETE"
+         })
+         .then(res => res.json())
+         .then(data => {
+          console.log(data)
+          togleCraft()
+         })
+        Swal.fire("Delete! Successfully", "", "success");
+      } else if (result.isDenied) {
+        Swal.fire("Changes are not saved", "", "info");
+      }
+    });
   
-   fetch(`http://localhost:5001/allCraft/${id}`,{
-    method:"DELETE"
-   })
-   .then(res => res.json())
-   .then(data => {
-    console.log(data)
-    togleCraft()
-    
-   })
-  
-   
   }
   
                                          
   console.log(allCraft)
-  console.log(items)
+
     return (
       <div>
         <h1 className='text-3xl font-bold mt-6 mb-8 text-center  underline'>Catagory Name</h1>
@@ -36,7 +48,7 @@ function MyArtAndCraft() {
        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
   
         {
-          allCraft && allCraft.filter(item => item.user_email == 'sarajit@gmail.com').map(item =>   <div className="card card-compact w-full bg-sky-100 shadow-xl">
+          allCraft && allCraft.filter(item => item.user_email == user.email).map(item =>   <div className="card card-compact w-full bg-sky-100 shadow-xl">
           <figure><img src={item.photo_url} alt="Shoes" className='h-72 w-full ' /></figure>
           <div className="card-body">
           <h1 className="text-3xl font-bold mb-4">{item.item_name}</h1>

@@ -51,6 +51,7 @@ import ArrowPage from "../components/arrowPage/ArrowPage";
         },
         {
           path:'/update/:id',
+          loader: ({params}) => fetch(`http://localhost:5001/allCraft/${params.id}`),
           element: <UpadtePage></UpadtePage>
         },
         {
