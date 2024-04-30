@@ -10,8 +10,19 @@ function MyArtAndCraft() {
     
  
   // delete Item from database
+  const deleteData =(url) =>{
+    fetch(url,{
+          method:"DELETE"
+         })
+         .then(res => res.json())
+         .then(data => {
+          console.log(data)
+          togleCraft()
+         })
+  }
   
-  const handleDelete =(id) =>{
+  const handleDelete =(id,item,price) =>{
+    const category = item.toLowerCase().replaceAll(' ','');
     Swal.fire({
       title: "Do you want to Delete?",
       showCancelButton: true,
@@ -22,16 +33,12 @@ function MyArtAndCraft() {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
         // data fetch
-        fetch(`http://localhost:5001/allCraft/${id}`,{
-          method:"DELETE"
-         })
-         .then(res => res.json())
-         .then(data => {
-          console.log(data)
-          togleCraft()
-         })
+        deleteData(`http://localhost:5001/allCraft/${id}`)
+        // deleteData(`http://localhost:5001/category/${category}/${price}`)
+    
         Swal.fire("Delete! Successfully", "", "success");
       } else if (result.isDenied) {
+      
         Swal.fire("Changes are not saved", "", "info");
       }
     });
@@ -43,7 +50,7 @@ function MyArtAndCraft() {
 
     return (
       <div>
-        <h1 className='text-3xl font-bold mt-6 mb-8 text-center  underline'>Catagory Name</h1>
+        <h1 className='text-3xl font-bold mt-6 mb-8 text-center  underline'>My all Art And Craft</h1>
   
        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
   
@@ -67,7 +74,7 @@ function MyArtAndCraft() {
                   <Link to={`/update/${item._id}`}> <button className='btn btn-sm bg-sky-400 text-gray-dark hover:text-sky-500'><Link>Update</Link></button>
                   </Link>
                    
-                    <button onClick={()=>handleDelete(item._id)} className='btn btn-error btn-sm text-gray-dark hover:text-light-color'>Delete</button>
+                    <button onClick={()=>handleDelete(item._id,item.item_name,item.price)} className='btn btn-error btn-sm text-gray-dark hover:text-light-color'>Delete</button>
                 </div>
             </div>
           </div> )
