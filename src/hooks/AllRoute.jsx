@@ -9,12 +9,18 @@ import ViewDetails from "../pages/ViewDetails";
 import MyArtAndCraft from "../pages/MyArtAndCraft";
 import CatagoryCard from "../components/allCard/CatagoryCard";
 import UpadtePage from "../pages/UpadtePage";
+import PrivateRoute from "../utility/PrivateRoute";
+import LogIn from "../components/allFrom/LogIn";
+import Register from "../components/allFrom/Register";
+import Profile from "../components/profile/Profile";
+import ArrowPage from "../components/arrowPage/ArrowPage";
  
   
  export const router = createBrowserRouter([
     {
       path: "/",
       element: <App></App>,
+      errorElement:<ArrowPage></ArrowPage>,
       children:[
         {
           path:'/',
@@ -26,16 +32,18 @@ import UpadtePage from "../pages/UpadtePage";
         },
         {
           path:'/addCraftItem',
-          element: <AddCreft></AddCreft>
+          element: <PrivateRoute><AddCreft></AddCreft></PrivateRoute>
         },
         {
           path:'/details/:id',
           loader: ({params}) => fetch(`http://localhost:5001/allCraft/${params.id}`),
-          element: <ViewDetails></ViewDetails>
+          element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>
+          
         },
         {
           path:'/myArtAndCraft',
-          element: <MyArtAndCraft></MyArtAndCraft>
+          element: <PrivateRoute>  <MyArtAndCraft></MyArtAndCraft></PrivateRoute>
+        
         },
         {
           path:'/catagory/:id',
@@ -44,6 +52,18 @@ import UpadtePage from "../pages/UpadtePage";
         {
           path:'/update/:id',
           element: <UpadtePage></UpadtePage>
+        },
+        {
+          path:"/logIn",
+          element:<LogIn></LogIn>
+        },
+        {
+          path:"/signUp",
+          element:<Register></Register>
+        },
+        {
+          path:"/profile",
+          element:<Profile></Profile>
         },
       ]
     },

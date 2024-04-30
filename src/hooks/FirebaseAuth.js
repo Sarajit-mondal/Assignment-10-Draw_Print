@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBIJTfwL5aP2rNQeFTeI5MMzJajYSOHvHw",
-  authDomain: "coffee-shop-9ab41.firebaseapp.com",
-  projectId: "coffee-shop-9ab41",
-  storageBucket: "coffee-shop-9ab41.appspot.com",
-  messagingSenderId: "263032874626",
-  appId: "1:263032874626:web:f03572ad5c0b6c5277369b",
+  apiKey: "AIzaSyBUAg18JrKP3bDDYsUA5eGZdPKFrVF2dlY",
+  authDomain: "draw-print-dream.firebaseapp.com",
+  projectId: "draw-print-dream",
+  storageBucket: "draw-print-dream.appspot.com",
+  messagingSenderId: "388247011397",
+  appId: "1:388247011397:web:0a8b9b2fd1601ff824232c"
 };
 
 // Initialize Firebase

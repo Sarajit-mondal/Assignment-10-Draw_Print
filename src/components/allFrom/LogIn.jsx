@@ -4,7 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import swal from 'sweetalert';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import 'animate.css';
+
 
 import {
   FaFacebook,
@@ -15,7 +15,7 @@ import {
 } from "react-icons/fa6";
 import { useState } from "react";
 import { useContext } from "react";
-import { userContext } from "../../utils/AuthProvider";
+import { userContext } from "../../utility/AuthProvider";
 import Loading from "../../components/loading/Loading";
 
 export default function LogIn() {
@@ -89,7 +89,7 @@ export default function LogIn() {
   return (
     <div className="lg:m-20 mt-10">
       <div className="grid grid-cols-1 md:grid-cols-2 justify-between w-full text-center items-center border-2 border-sky-100  mx-auto rounded-2xl  shadow-xl overflow-hidden">
-        <div className="animate__animated animate__bounceInLeft bg-sky-200 h-full flex flex-col space-y-5 items-center justify-center p-10 text-white text-light">
+        <div className=" bg-sky-200 h-full flex flex-col space-y-5 items-center justify-center p-10 text-white text-light">
           <h2 className="text-3xl text-grayLight font-extrabold">
             Hellow, Friend!
           </h2>
@@ -99,12 +99,12 @@ export default function LogIn() {
             to="/signUp"
             className="py-3 px-10 bg-transparent border-2 border-white rounded-full font-semibold"
           >
-            SIGN  UP
+           Register
           </Link>
         </div>
 
         {/* Form section */}
-        <div className="p-10 animate__animated animate__bounceInRight">
+        <div className="p-10">
           {/* login with social */}
           <div>
             <h2 className="text-3xl font-extrabold">Create Account</h2>

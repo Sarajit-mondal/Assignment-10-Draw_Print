@@ -5,12 +5,10 @@ import { useForm } from 'react-hook-form';
 
 const AddCreft = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const onSubmit = (data) => {
-    // Handle form submission here, e.g., send data to backend
-    console.log(data)
   
-   
-    fetch('http://localhost:5001/allCraft',{
+  // post data
+  const addData =(url,data) =>{
+    fetch(url,{
       method:"POST",
       headers:
         {
@@ -23,9 +21,17 @@ const AddCreft = () => {
     .then(data => {
       console.log(data)
     })
-  };
+  }
+ 
+  const onSubmit = (data) => {
+    // Handle form submission here, e.g., send data to backend
+    console.log(data)
+    const category = data.item_name.toLowerCase().replaceAll(' ','');
+   
+    addData('http://localhost:5001/allCraft',data)
+    addData(`http://localhost:5001/category/${category}`,data)
 
-  
+  }
   return (
     <form onSubmit={handleSubmit(onSubmit)} className=" mx-auto p-5 md:px-16 lg:px-28 ">
    <div className='flex flex-col justify-between md:flex-row md:gap-20 items-center'>

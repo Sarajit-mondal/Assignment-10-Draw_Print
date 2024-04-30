@@ -53,7 +53,7 @@ function CreftItemSection() {
             
                             <img src={CraftCard} alt="" className='w-full h-[250px] rounded-2xl' />
             
-                                <img src={OilPainting} alt="" className='absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 w-[245px] h-[147px]  rounded-sm  feathered-edge' />
+                                <img src={item.photo_url} alt="" className='absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 w-[245px] h-[147px]  rounded-sm  feathered-edge' />
                                
                             </SwiperSlide>
                         }else{
@@ -71,7 +71,7 @@ function CreftItemSection() {
                 </div>
          {/* text and button   */}
                 <img src={cardFram} alt="" className='absolute z-10 w-full h-[250px]' /> 
-              <img src={OilPainting} alt=""  className='absolute p-8'/>
+              <img src={item.photo_url} alt=""  className='absolute p-8'/>
         </div> 
         </SwiperSlide>
                         }

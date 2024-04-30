@@ -1,9 +1,15 @@
 import { createContext, useEffect, useState } from "react";
 import { auth } from "../hooks/FirebaseAuth";
 import {
+  FacebookAuthProvider,
+  GithubAuthProvider,
+  GoogleAuthProvider,
   createUserWithEmailAndPassword,
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  signInWithPopup,
+  signOut,
+  updateProfile,
 } from "firebase/auth";
 
 export const userContext = createContext();
@@ -12,8 +18,15 @@ function AuthProvider({ children }) {
   const [allCraft, setAllCraft] = useState();
   const [togle, setTogle] = useState(true);
 
+  const [loading, setLoading] = useState(true);
+
+  const googleProvider = new GoogleAuthProvider();
+  const faceBookProvider = new FacebookAuthProvider();
+  const gitHubProvider = new GithubAuthProvider();
+
+
   //    get data from database
-  const togleCoffee = () => {
+  const togleCraft = () => {
     setTogle(!togle);
   };
   useEffect(() => {
@@ -23,16 +36,39 @@ function AuthProvider({ children }) {
   }, [togle]);
   //    getdata from database
 
-  // firebase
-  // firebase
-  // sign Up user
-  const createUser = (email, password) => {
-    return createUserWithEmailAndPassword(auth, email, password, logInUser);
+  // signUp with email or password
+  const creactAccount = (email, password) => {
+    setLoading(true);
+    return createUserWithEmailAndPassword(auth, email, password);
   };
 
-  // login user
-  const logInUser = (email, password) => {
+  // SignIn with email or password
+  const LogInWithEOrP = (email, password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
+  };
+  // SignOut
+  const LogOutUser = () => {
+    setLoading(true);
+    return signOut(auth);
+  };
+
+  //LogIn with social
+  const LogInWithSocial = (social) => {
+    if (social == "google") {
+      return signInWithPopup(auth, googleProvider);
+    } else if (social == "facebook") {
+      return signInWithPopup(auth, faceBookProvider);
+    }
+    return signInWithPopup(auth, gitHubProvider);
+  };
+
+  ///update profile
+  const updateUserProfile = (name, url) => {
+    return updateProfile(auth.currentUser, {
+      displayName: name,
+      photoURL: url,
+    });
   };
 
   // is have user
@@ -40,16 +76,27 @@ function AuthProvider({ children }) {
     const unsubcribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       console.log(currentUser);
+      setLoading(false);
     });
 
     return () => {
       unsubcribe();
     };
   }, []);
-  // firebase
-  // firebase
 
-  const info = { user, allCraft, togleCoffee, createUser, logInUser };
+  const info = {
+    user,
+    creactAccount,
+    LogInWithEOrP,
+    LogOutUser,
+    loading,
+    setLoading,
+    LogInWithSocial,
+    updateUserProfile,
+    allCraft, togleCraft
+  };
+
+
   return <userContext.Provider value={info}>{children}</userContext.Provider>;
 }
 

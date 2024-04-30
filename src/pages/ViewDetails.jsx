@@ -44,9 +44,9 @@ const item = useLoaderData()
     
   return (
     <div className="max-w-5xl mx-auto px-4 py-5 h-screen ">
-    <div className="grid grid-cols-1 md:h-3/4 md:mt-10  md:grid-cols-2 gap-8 border-2 border-sky-400 ">
+    <div className="grid grid-cols-1 md:h-[500px] md:mt-10  md:grid-cols-2 gap-8 border-2 border-sky-400 ">
       <div className="p-1">
-        <img src={item.photo_url} alt={item.item_name} className="w-full h-full" />
+        <img src={item.photo_url} alt={item.item_name} className="w-full md:h-full" />
       </div>
 
       {/* right side */}
@@ -65,9 +65,9 @@ const item = useLoaderData()
           <p>Stock Status: {item.stock_status
 }</p>
         </div>
-        <div className="mb-4">
-          <p>User Email: {item.user_email}</p>
-          <p>User Name: {item.user_name}</p>
+        <div className="mb-4 flex justify-between items-center">
+          <p>Woner Email: {item.user_email}</p>
+          <p>Create by: {item.user_name}</p>
         </div>
         {/* Add any additional details or actions here */}
       </div>

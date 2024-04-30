@@ -3,9 +3,9 @@ import { NavLink } from 'react-router-dom'
 
 function Footer() {
   return (
-   <footer className='grid grid-cols-1 md:grid-cols-5 gap-10'>
+   <footer className='grid grid-cols-1 md:grid-cols-5 md:gap-10'>
      <div className="space-y-8 p-10 col-span-3  w-11/12 mx-auto max-w-[1280px]">
-    <h2 className='text-4xl font-bold '>WebSite Name</h2>
+    <h2 className='text-4xl font-bold '>Draw Print Dream</h2>
     <nav className="grid grid-flow-col gap-4 [&>*]:font-bold">
     <NavLink to="/">Home</NavLink>
                     <NavLink to="/allArtAndCraft">All Art & craft Items</NavLink>
