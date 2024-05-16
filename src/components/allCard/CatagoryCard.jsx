@@ -21,7 +21,7 @@ console.log(items)
      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
 
       {
-        items && items.map(item =>   <div className="card card-compact w-full bg-sky-100 shadow-xl">
+        items && items.map(item =>   <div key={item._id} className="card card-compact w-full bg-sky-100 shadow-xl">
         <figure><img src={item.photo_url} alt="Shoes" className='h-72 w-full ' /></figure>
         <div className="card-body">
         <h1 className="text-3xl font-bold mb-4">{item.item_name}</h1>
@@ -39,7 +39,8 @@ console.log(items)
               </div> */}
               <div className='mb-4  flex justify-between gap-5 items-center'>
               <p>processing Time : {item.processing_time} hours</p>
-               <button className='btn btn-sm bg-sky-400 text-gray-dark hover:text-sky-500'><Link >View Details</Link></button>
+               <button className='btn btn-sm bg-sky-400 text-gray-dark hover:text-sky-500'>
+                <Link to={`/category/details/${findItem.id}/${item._id}`}>View Details</Link></button>
                 
             
 

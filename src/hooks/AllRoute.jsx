@@ -14,6 +14,7 @@ import LogIn from "../components/allFrom/LogIn";
 import Register from "../components/allFrom/Register";
 import Profile from "../components/profile/Profile";
 import ArrowPage from "../components/arrowPage/ArrowPage";
+import ViewDetailsTwo from "../pages/ViewDetailsTwo";
  
   
  export const router = createBrowserRouter([
@@ -37,8 +38,13 @@ import ArrowPage from "../components/arrowPage/ArrowPage";
         {
           path:'/details/:id',
           loader: ({params}) => fetch(`https://a-10-painting-and-drawing-server.vercel.app/allCraft/${params.id}`),
-          element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>
           
+          element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>
+        },
+        {
+          path:'/category/details/:item/:id',
+          loader: ({params}) => fetch(`https://a-10-painting-and-drawing-server.vercel.app/category/details/${params.item}/${params.id}`),
+          element:<PrivateRoute> <ViewDetailsTwo></ViewDetailsTwo></PrivateRoute>
         },
         {
           path:'/myArtAndCraft',
@@ -51,8 +57,8 @@ import ArrowPage from "../components/arrowPage/ArrowPage";
         },
         {
           path:'/update/:id',
-          loader: ({params}) => fetch(`https://a-10-painting-and-drawing-server.vercel.app/allCraft/${params.id}`),
-          element: <UpadtePage></UpadtePage>
+     
+          element: <PrivateRoute><UpadtePage></UpadtePage></PrivateRoute>
         },
         {
           path:"/logIn",

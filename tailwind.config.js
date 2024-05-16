@@ -12,8 +12,9 @@ export default {
      'sky-300': "#a0d9ef",
      'sky-200': "#cfecf7",
      "gray-dark": "#444444",
+     "dark":"#000000",
      "gray-light":"#999999",
-     "light-color":"#ffffff",
+     "light-color":"#fff",
      "red-500":"#ff0000"
     },
     fontFamily: {

@@ -1,13 +1,26 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useParams } from 'react-router-dom';
 import { userContext } from '../utility/AuthProvider';
 import swal from 'sweetalert';
+import Loading from '../components/loading/Loading';
 
 function UpadtePage() {
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const {togleCraft} = useContext(userContext)
-    const updateItem = useLoaderData()
+    const {togleCraft,loading, setLoading} = useContext(userContext)
+    const {id} = useParams()
+
+    const [updateItem,setUpdateItem] = useState()
+   
+    useEffect(()=>{
+     fetch( `https://a-10-painting-and-drawing-server.vercel.app/allCraft/${id}`)
+     .then(res => res.json())
+    .then(data =>{
+      setUpdateItem(data)
+      setLoading(false)
+    } )
+    },[])
+
     console.log(updateItem)
     const onSubmit = (data) => {
       // Handle form submission here, e.g., send data to backend
@@ -36,9 +49,14 @@ function UpadtePage() {
       togleCraft()
     };
   
-    
+ if(loading){
+      return <Loading></Loading>
+    }
+
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className=" mx-auto p-5 md:px-16 lg:px-28 ">
+       <>
+       {
+        updateItem &&  <form onSubmit={handleSubmit(onSubmit)} className=" mx-auto p-5 md:px-16 lg:px-28 ">
         <div className='flex flex-col justify-between md:flex-row md:gap-20 items-center'>
         <div className='w-full'>
           <div className="mb-4">
@@ -126,6 +144,8 @@ function UpadtePage() {
           {/* add button */}
            <button type="submit" className="bg-sky-500 text-gray-dark py-2 px-4 rounded hover:bg-sky-400 text-center w-full">Update</button>
          </form>
+       }
+       </>
     );
   };
   

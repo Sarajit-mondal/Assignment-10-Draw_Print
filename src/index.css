@@ -15,3 +15,7 @@ tr,th,td{
     padding-left: 8px;
     
 }
+
+.dark-them{
+    background-color: black;
+}

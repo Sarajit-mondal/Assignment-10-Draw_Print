@@ -8,7 +8,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className='font-Lobster text-[18px] text-gray-dark flex flex-col justify-between min-h-screen'>
+    <div className='mainApp font-Lobster text-[18px] text-gray-dark flex flex-col justify-between min-h-screen'>
     <header className='bg-purple-400 '>
      <NavBar></NavBar>
     </header>
